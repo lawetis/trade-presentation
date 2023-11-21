@@ -1,0 +1,320 @@
+html {
+    font-size: 14px;
+}
+body {
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
+.theme-dark:root {
+    --tv-color-platform-background: #d1c4e9;
+    --tv-color-pane-background: rgb(251, 223, 244);
+    --tv-color-toolbar-button-background-hover: rgb(244, 143, 177);
+    --tv-color-toolbar-button-background-expanded: rgb(244, 143, 177);
+    --tv-color-toolbar-button-background-active: rgb(249, 185, 233);
+    --tv-color-toolbar-button-background-active-hover: rgb(244, 143, 177);
+    --tv-color-toolbar-button-text: rgb(136, 24, 79);
+    --tv-color-toolbar-button-text-hover: rgb(74, 20, 140);
+    --tv-color-toolbar-button-text-active: red;
+    --tv-color-toolbar-button-text-active-hover: red;
+    --tv-color-item-active-text: rgb(6, 255, 6);
+    --tv-color-toolbar-toggle-button-background-active: red;
+    --tv-color-toolbar-toggle-button-background-active-hover: magenta;
+    --tv-color-toolbar-divider-background: rgb(251, 223, 244);
+    --tv-color-toolbar-save-layout-loader: rgb(134, 137, 147);
+
+    --tv-color-popup-background: rgb(241, 188, 225);
+    --tv-color-popup-element-text: rgb(136, 24, 79);
+    --tv-color-popup-element-text-hover: rgb(74, 20, 140);
+    --tv-color-popup-element-background-hover: rgb(244, 143, 177);
+    --tv-color-popup-element-divider-background: rgb(251, 223, 244);
+    --tv-color-popup-element-secondary-text: rgb(74, 20, 140);
+    --tv-color-popup-element-hint-text: rgb(74, 20, 140);
+    --tv-color-popup-element-text-active: rgb(6, 6, 255);
+    --tv-color-popup-element-background-active: red;
+    --tv-color-popup-element-toolbox-text: rgb(136, 24, 79);
+    --tv-color-popup-element-toolbox-text-hover: rgb(74, 20, 140);
+    --tv-color-popup-element-toolbox-text-active-hover: rgb(74, 20, 140);
+    --tv-color-popup-element-toolbox-background-hover: rgb(222, 89, 132);
+    --tv-color-popup-element-toolbox-background-active-hover: magenta;
+}
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+/* 整体部分 */
+::-webkit-scrollbar {
+    width: 8px; /* 滚动条的宽度 */
+    height: 8px; /* 水平滚动条的高度 */
+    background-color: transparent;
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+    background: #1f2937; /* 轨道的颜色 */
+    border-radius: 4px; /* 轨道的圆角 */
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    background: #374151; /* 轨道的颜色 */
+    border-radius: 10px; /* 滑块的圆角 */
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); /* 滑块的内阴影 */
+}
+
+/* 滚动条滑块:hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4b5563; /* 滑块:hover 的颜色 */
+}
+
+label,
+span {
+    display: block;
+}
+
+#app {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home_main {
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page_charts {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background: radial-gradient(122.53% 124% at 50% 100%, #000 0%, #150b23 100%), #000;
+    background-color: #000000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .charts_header {
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+    }
+    .charts_container {
+        width: 100%;
+        flex: 1;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.stock_info {
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    .name {
+        background-color: #262134;
+        border-radius: 1rem;
+        padding: 0.75rem 1rem;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        label {
+            color: white;
+        }
+        span {
+            color: rgba(148, 151, 169, 1);
+        }
+    }
+    .sep_line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        .items {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            gap: 0.4rem;
+            label {
+                color: rgba(148, 151, 169, 1);
+            }
+            span {
+                color: white;
+                font-size: 0.85rem;
+                line-height: 1rem;
+                i {
+                    margin: 0 0.5rem;
+                    color: rgba(148, 151, 169, 1);
+                }
+            }
+        }
+    }
+    .ochl_line {
+        flex: 1;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 300px;
+        gap: 0.4rem;
+        .items {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            label {
+                color: white;
+                font-size: 0.85rem;
+                line-height: 1rem;
+                flex: 1;
+            }
+            span {
+                color: rgba(148, 151, 169, 1);
+                width: 30px;
+            }
+        }
+    }
+}
+.stock_blank {
+    height: 15rem;
+    min-height: 220px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: wheat;
+}
+.stock_section {
+    .section_orderbook,
+    .section_trades {
+        box-shadow: 0px 0px 0px 0px #000;
+        border-radius: 0.8rem;
+        width: 20rem;
+        min-width: 320px;
+        background-color: rgba(104, 107, 130, 0.12);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .title {
+            padding: 1rem;
+            font-size: 14px;
+            padding: 0.5rem 1rem;
+            color: rgb(148, 151, 169);
+            border-bottom: 2px solid rgba(148, 151, 169, 0.1);
+        }
+    }
+}
+.stock_section {
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    margin-top: 2rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    gap: 0.8rem;
+    height: 0;
+    .section_chart {
+        flex: 1;
+        background-color: rgba(104, 107, 130, 0.12);
+        border-radius: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        .separator {
+            height: 22px;
+            margin: auto 4px;
+            width: 2px;
+            background-color: #374151;
+        }
+        .chart_container {
+            flex: 1;
+            iframe {
+                width: 100%!important;
+                height: 100%!important;
+            }
+        }
+    }
+    .section_trades {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .section_orderbook {
+        .bg-order-book-negative {
+            background-color: rgba(245, 57, 94, 0.24);
+        }
+        .bg-order-book-positive {
+            background-color: rgba(20, 158, 97, 0.24);
+        }
+        .rate {
+            height: 28px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            margin: 0.5rem 0;
+            padding: 0 1rem;
+            position: relative;
+            .rate_items {
+                height: 28px;
+                width: 28px;
+                font-size: 12px;
+                line-height: 28px;
+                border-radius: 4px;
+                text-align: center;
+                box-sizing: border-box;
+                margin-right: -8px;
+                z-index: 1;
+                font-weight: 600;
+                flex-shrink: 0;
+                background: #fff;
+            }
+            .buy {
+                color: #11ad7a;
+            }
+            .sell {
+                color: #cc3d3d;
+            }
+            .background {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 28px;
+                flex: 1;
+                position: relative;
+                font-size: 12px;
+                .buy {
+                    color: #11ad7a;
+                    background: rgba(17, 173, 122, 0.2);
+                }
+                .sell {
+                    background: rgba(204, 61, 61, 0.2);
+                    color: #cc3d3d;
+                }
+                .back_items {
+                    height: 28px;
+                    line-height: 28px;
+                    text-align: start;
+                    box-sizing: border-box;
+                    padding-left: 12px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

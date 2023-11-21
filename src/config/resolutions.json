@@ -1,0 +1,52 @@
+[
+    {
+        "text": "Time",
+        "value": "1Min",
+        "interval": "Time"
+    },
+    {
+        "text": "1min",
+        "value": "1Min",
+        "interval": "1"
+    },
+    {
+        "text": "5min",
+        "value": "5Min",
+        "interval": "5"
+    },
+    {
+        "text": "15min",
+        "value": "15Min",
+        "interval": "15"
+    },
+    {
+        "text": "30min",
+        "value": "30Min",
+        "interval": "30"
+    },
+    {
+        "text": "1hour",
+        "value": "1Hour",
+        "interval": "60"
+    },
+    {
+        "text": "4hour",
+        "value": "4Hour",
+        "interval": "240"
+    },
+    {
+        "text": "1day",
+        "value": "24Hour",
+        "interval": "D"
+    },
+    {
+        "text": "1week",
+        "value": "1Week",
+        "interval": "W"
+    },
+    {
+        "text": "1mon",
+        "value": "1Month",
+        "interval": "M"
+    }
+]
