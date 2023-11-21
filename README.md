@@ -10,6 +10,9 @@
 - [Font Awesome图标库](https://note.youdao.com/)
 - [Tailwindcss](https://tailwindcss.com/)
 
+## 页面说明
+
+该项目仅提供两个页面进行演示，首页以及图表交易页
 
 ## 项目运行步骤
 
