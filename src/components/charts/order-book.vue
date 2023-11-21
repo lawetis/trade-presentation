@@ -74,11 +74,9 @@ const generateRandomSteps = (itemCount, ascending) => {
         let randomStep
 
         if (ascending) {
-            // Index越大，值越小，生成递增的随机步进值
             randomStep = Math.random() * (1 - currentStep)
             currentStep += randomStep
         } else {
-            // Index越小，值越小，生成递减的随机步进值
             randomStep = currentStep * Math.random()
             currentStep -= randomStep
         }
@@ -92,7 +90,6 @@ const initOrderbook = (ascending) => {
     const n = 20
     const scales = []
     const stepValues = generateRandomSteps(n, ascending)
-    // 遍历n个元素
     for (let index = 0; index < n; index++) {
         const randomData = generateOrderBookEntry(1500, 1700, 0.1, 100, 2, 2)
         const itemTemp = {
